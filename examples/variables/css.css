@@ -1,0 +1,28 @@
+.grid {
+	grid-template-columns: repeat(3, 150px);
+	grid-template-rows: repeat(3, 150px);
+	grid-row-gap: 5px;
+	grid-column-gap: 5px;
+}
+
+@media screen and (min-width: 990px) {
+	.grid {
+		grid-row-gap: 10px;
+		grid-column-gap: 10px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.grid {
+		grid-row-gap: 15px;
+		grid-column-gap: 15px;
+	}
+}
+
+.grid .gridCell:nth-child(odd) {
+	background: #83d0f2;
+}
+
+.grid .gridCell:nth-child(even) {
+	background: #f5d67b;
+}

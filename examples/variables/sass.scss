@@ -1,0 +1,43 @@
+$blue: #83d0f2;
+$yellow: #f5d67b;
+
+$smallGutter: 5px;
+$mediumGutter: 10px;
+$largeGutter: 15px;
+
+$desktopWidth: 1200px;
+$tabletWidth: 990px;
+
+$gridCellSize: 150px;
+
+$shadowColor: rgba(0,0,0, .35);
+$globalShadow: 0px 2px 2px -1px $shadowColor,
+				0px 1px 3px 0px $shadowColor;
+
+.grid {
+	grid-template-columns: repeat(3, $gridCellSize);
+	grid-template-rows: repeat(3, $gridCellSize);
+	grid-row-gap: $smallGutter;
+	grid-column-gap: $smallGutter;
+	box-shadow: $globalShadow;
+
+	@media screen and (min-width: $tabletWidth) {
+		grid-row-gap: $mediumGutter;
+		grid-column-gap: $mediumGutter;
+	}
+
+	@media screen and (min-width: $desktopWidth) {
+		grid-row-gap: $largeGutter;
+		grid-column-gap: $largeGutter;
+	}
+
+	.gridCell {
+		box-shadow: $globalShadow;
+		&:nth-child(odd) {
+			background: $blue;
+		}
+		&:nth-child(even) {
+			background: $yellow;
+		}
+	}
+}
