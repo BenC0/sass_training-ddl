@@ -1,0 +1,41 @@
+.variation_loaded {
+	#elementA {
+		display: block;
+		background: white;
+		border: 1px solid blue;
+	}
+
+	#elementB {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 150px);
+		grid-column-gap: 10px;
+		grid-row-gap: 10px;
+
+		.grid-space {
+			border: 1px solid rgba(0,0,0,.15);
+			position: relative;
+
+			&::after {
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				opacity: 0;
+				color: white;
+				background: black;
+				position: absolute;
+				content: 'Lorem Ipsum';
+				transition: all .1s ease-in;
+			}
+
+			&:hover {
+				box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
+
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
