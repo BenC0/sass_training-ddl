@@ -1,0 +1,15 @@
+nav {
+	float: left;
+	display: block;
+
+	& > a {
+		float: left;
+		padding: 4px 7px;
+		background: transparent;
+		display: inline-block;
+
+		&:hover {
+			background: rgba(white, .7);
+		}
+	}
+}

@@ -1,0 +1,56 @@
+section {
+	padding: 0px 20px;
+	max-width: 1200px;
+	width: 100%;
+	float: left;
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: "Roboto";
+	}
+
+	h1 {
+		font-size: 28px;
+	}
+
+	h2 {
+		font-size: 26px;
+	}
+
+	h3 {
+		font-size: 24px;
+	}
+
+	h4 {
+		font-size: 22px;
+	}
+
+	h5 {
+		font-size: 20px;
+	}
+
+	h6 {
+		font-size: 18px;
+	}
+
+	p, span, a {
+		font-family: "Open-Sans";
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	a {
+		text-decoration: none;
+		position: relative;
+
+		&::after {
+			content: ' ';
+			height: 1px;
+			display: block;
+			left: 0;
+			right: 0;
+			bottom: -1px;
+			position: absolute;
+			background: black;
+		}
+	}
+}

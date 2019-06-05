@@ -1,0 +1,97 @@
+.variation_loaded header {
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 80px;
+	position: fixed;
+	background: blue;
+}
+
+.variation_loaded nav {
+	float: left;
+	display: block;
+}
+
+.variation_loaded nav > a {
+	float: left;
+	padding: 4px 7px;
+	background: transparent;
+	display: inline-block;
+}
+
+.variation_loaded nav > a:hover {
+	background: rgba(255, 255, 255, 0.7);
+}
+
+.variation_loaded section {
+	padding: 0px 20px;
+	max-width: 1200px;
+	width: 100%;
+	float: left;
+}
+
+.variation_loaded section h1, .variation_loaded section h2, .variation_loaded section h3, .variation_loaded section h4, .variation_loaded section h5, .variation_loaded section h6 {
+	font-family: "Roboto";
+}
+
+.variation_loaded section h1 {
+	font-size: 28px;
+}
+
+.variation_loaded section h2 {
+	font-size: 26px;
+}
+
+.variation_loaded section h3 {
+	font-size: 24px;
+}
+
+.variation_loaded section h4 {
+	font-size: 22px;
+}
+
+.variation_loaded section h5 {
+	font-size: 20px;
+}
+
+.variation_loaded section h6 {
+	font-size: 18px;
+}
+
+.variation_loaded section p, .variation_loaded section span, .variation_loaded section a {
+	font-family: "Open-Sans";
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.variation_loaded section a {
+	text-decoration: none;
+	position: relative;
+}
+
+.variation_loaded section a::after {
+	content: ' ';
+	height: 1px;
+	display: block;
+	left: 0;
+	right: 0;
+	bottom: -1px;
+	position: absolute;
+	background: black;
+}
+
+.variation_loaded footer {
+	float: left;
+	display: block;
+	background: #1a1a1a;
+}
+
+.variation_loaded footer ul {
+	float: left;
+	max-width: 300px;
+}
+
+.variation_loaded footer ul a {
+	color: white;
+	font-size: 14px;
+}
