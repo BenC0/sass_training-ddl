@@ -1,0 +1,26 @@
+$parentWidth: 1200px;
+$parentHeight: 700px;
+
+$childWidth: $parentWidth * 0.7;
+$childHeight: $parentHeight * 0.7;
+
+$childVerticalOffset: ($parentHeight - $childHeight)/2;
+$childHorizontalOffset: ($parentWidth - $childWidth)/2;
+
+$fontSize: 16px;
+$lineHeight: $fontSize + 4;
+
+.parent {
+	width: $parentWidth;
+	height: $parentHeight;
+	margin: 0 auto;
+
+	.child {
+		width: $childWidth;
+		height: $childHeight;
+		margin: $childVerticalOffset $childHorizontalOffset;
+
+		font-size: $fontSize;
+		line-height: $lineHeight;
+	}
+}

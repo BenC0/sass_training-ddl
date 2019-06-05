@@ -1,0 +1,14 @@
+.parent {
+	width: 1200px;
+	height: 700px;
+	margin: 0 auto;
+
+}
+.parent .child {
+	width: 840px;
+	height: 490px;
+	margin: 105px 180px;
+
+	font-size: 16px;
+	line-height: 20px;
+}
