@@ -1,0 +1,27 @@
+@import "../globals";
+
+header {
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	position: fixed;
+
+	display: flex;
+	align-content: flex-start;
+	justify-content: space-between;
+
+	padding: $gutter;
+
+	.logo {
+		width: 100%;
+		max-width: 150px;
+		display: none;
+	}
+
+	&[logo="green"] .logo--green,
+	&[logo="black"] .logo--black,
+	&[logo="white"] .logo--white {
+		display: block;
+	}
+}
