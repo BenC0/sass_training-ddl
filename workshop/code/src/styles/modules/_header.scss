@@ -19,6 +19,18 @@ header {
 		display: none;
 	}
 
+	&[logo="green"] {
+		background: rgba($brand-primary--white, .75);
+	}
+
+	&[logo="black"] {
+		background: rgba($brand-accent--slate, .75);
+	}
+
+	&[logo="white"] {
+		background: rgba($brand-primary--green, .75);
+	}
+
 	&[logo="green"] .logo--green,
 	&[logo="black"] .logo--black,
 	&[logo="white"] .logo--white {

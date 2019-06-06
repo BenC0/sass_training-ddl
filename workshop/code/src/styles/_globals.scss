@@ -10,7 +10,9 @@ $brand-accent--slate: #595959;
 $brand-accent--light-blue: #23D3D0;
 
 $gutter: 15px;
-$section-padding--v: $gutter * 2;
+$section-padding--v: $gutter * 5;
+
+$content--font-size: 70px;
 
 %absolute-center {
 	top: 50%;
@@ -19,16 +21,27 @@ $section-padding--v: $gutter * 2;
 	transform: translate(-50%, -50%);
 }
 
+%vertical-center {
+	top: 50%;
+	position: absolute;
+	transform: translateY(-50%);
+}
+
 %overlay {
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	content: ' ';
 	position: absolute;
 }
 
 %psuedo-overlay {
 	@extend %overlay;
 	content: ' ';
+}
+
+@mixin emphasise($col1, $col2) {
+	$offset: 3px;
+	text-shadow: -#{$offset} -#{$offset} 0px $col1,
+					#{$offset} #{$offset} 0px $col2;
 }

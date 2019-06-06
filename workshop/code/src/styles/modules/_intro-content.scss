@@ -1,31 +1,10 @@
 #intro {
 	position: relative;
-	overflow: hidden;
 
 	.intro {
 		&--content {
 			display: grid;
 			grid-template-columns: repeat(2, 50%);
-
-			z-index: 1;
-			position: relative;
-
-			.left-aligned,
-			.right-aligned {
-				grid-row: 1;
-			}
-
-
-			h2 {
-				font-size: 70px;
-
-				.emphasise {
-					display: inline-block;
-					$offset: 3px;
-					text-shadow: -#{$offset} -#{$offset} 0px $brand-accent--orange,
-									#{$offset} #{$offset} 0px $brand-accent--light-blue;
-				}
-			}
 		}
 		&--video {
 			@extend %overlay;

@@ -1,0 +1,27 @@
+#returns {
+	position: relative;
+	overflow: hidden;
+
+	.returns {
+		&--content {
+
+			.copy {
+				display: flex;
+				flex-direction: column;
+				text-align: center;
+
+				p {
+					padding: $gutter $gutter*2;
+
+					&.emphasise {
+						font-size: $content--font-size * 1.4;
+					}
+				}
+			}
+		}
+		&--video {
+			@extend %vertical-center;
+			z-index: 0;
+		}
+	}
+}

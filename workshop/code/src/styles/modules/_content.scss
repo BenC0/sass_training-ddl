@@ -5,6 +5,7 @@
 	float: left;
 	display: block;
 	padding: $section-padding--v 0;
+	background-color: $brand-accent--white;
 
 	.content {
 		width: 100%;
@@ -12,7 +13,45 @@
 		padding: 0 $gutter;
 		display: block;
 		max-width: 1200px;
+
+		z-index: 1;
+		position: relative;
+
+		.left-aligned {
+			grid-column: 1;
+		}
+		.right-aligned {
+			grid-column: 2;
+		}
+
+		.left-aligned,
+		.right-aligned {
+			grid-row: 1;
+		}
+
+		p {
+			font-size: $content--font-size;
+		}
+
+		.emphasise {
+			display: inline-block;
+			@include emphasise($brand-accent--orange, $brand-accent--light-blue);
+			
+			& ~ .emphasise {
+				@include emphasise($brand-accent--light-blue, $brand-accent--orange);
+				
+				& ~ .emphasise {
+					@include emphasise($brand-accent--orange, $brand-accent--light-blue);
+				}
+			}
+		}
+
+		.disclaimer {
+			font-size: $content--font-size * .25;
+		}
 	}
 }
 
 @import "./intro-content";
+@import "./what-content";
+@import "./returns-content";
