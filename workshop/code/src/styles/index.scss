@@ -1,2 +1,29 @@
+@font-face {
+	font-family: 'Brandon Grotesque Medium';
+	font-style: normal;
+	font-weight: normal;
+	src: url('./fonts/brandon-grotesque-medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Brandon Grotesque Thin';
+	font-style: normal;
+	font-weight: normal;
+	src: url('./fonts/brandon-grotesque-thin.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Brandon Grotesque Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: url('./fonts/brandon-grotesque-bold.woff') format('woff');
+}
+
 @import "./modules/normalise";
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Brandon Grotesque Medium';
+}
+
+@import "./modules/header";
 @import "./modules/hero";
