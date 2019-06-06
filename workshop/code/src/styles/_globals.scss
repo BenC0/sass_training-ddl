@@ -1,0 +1,28 @@
+$brand-primary--green: #1BBC8C;
+$brand-primary--grey: #A6A6A6;
+$brand-primary--white: #E9EEEF;
+
+$brand-accent--green: #1ABC9C;
+$brand-accent--blue: #2980B9;
+$brand-accent--orange: #FFBE76;
+$brand-accent--white: #FFFFFF;
+$brand-accent--slate: #595959;
+$brand-accent--light-blue: #23D3D0;
+
+$gutter: 15px;
+
+%absolute-center {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+%psuedo-overlay {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: ' ';
+	position: absolute;
+}
