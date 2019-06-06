@@ -10,6 +10,7 @@ $brand-accent--slate: #595959;
 $brand-accent--light-blue: #23D3D0;
 
 $gutter: 15px;
+$section-padding--v: $gutter * 2;
 
 %absolute-center {
 	top: 50%;
@@ -18,11 +19,16 @@ $gutter: 15px;
 	transform: translate(-50%, -50%);
 }
 
-%psuedo-overlay {
+%overlay {
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	content: ' ';
 	position: absolute;
+}
+
+%psuedo-overlay {
+	@extend %overlay;
+	content: ' ';
 }

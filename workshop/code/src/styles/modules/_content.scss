@@ -1,0 +1,18 @@
+@import "../globals";
+
+.container {
+	width: 100%;
+	float: left;
+	display: block;
+	padding: $section-padding--v 0;
+
+	.content {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 $gutter;
+		display: block;
+		max-width: 1200px;
+	}
+}
+
+@import "./intro-content";
