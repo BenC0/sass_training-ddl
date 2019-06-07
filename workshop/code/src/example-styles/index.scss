@@ -1,3 +1,4 @@
+// Declaring fonts - Standard CSS
 @font-face {
 	font-family: 'Brandon Grotesque Medium';
 	font-style: normal;
@@ -19,6 +20,8 @@
 	src: url('./fonts/brandon-grotesque-bold.woff') format('woff');
 }
 
+// SCSS Partials - importing individual stylesheet modules into a single file
+// Styles within the partials are placed into the compiled file in the order in which they appear  
 @import "./modules/normalise";
 @import "./globals";
 @import "./modules/general";
