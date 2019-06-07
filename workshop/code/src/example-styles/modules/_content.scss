@@ -1,5 +1,3 @@
-@import "../globals";
-
 .container {
 	width: 100%;
 	float: left;
@@ -17,6 +15,7 @@
 		z-index: 1;
 		position: relative;
 
+
 		.left-aligned {
 			grid-column: 1;
 		}
@@ -29,12 +28,9 @@
 			grid-row: 1;
 		}
 
-		p {
-			font-size: $content--font-size;
-		}
-
 		.emphasise {
 			display: inline-block;
+			font-family: 'Brandon Grotesque Bold';
 			@include emphasise($brand-accent--orange, $brand-accent--light-blue);
 			
 			& ~ .emphasise {
@@ -47,7 +43,8 @@
 		}
 
 		.disclaimer {
-			font-size: $content--font-size * .25;
+			font-size: $intro-content--font-size * .25;
+			font-family: 'Brandon Grotesque Thin';
 		}
 	}
 }
@@ -55,3 +52,4 @@
 @import "./intro-content";
 @import "./what-content";
 @import "./returns-content";
+@import "./enquire-content";

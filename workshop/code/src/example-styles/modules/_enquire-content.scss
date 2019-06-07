@@ -1,0 +1,13 @@
+#enquire {
+	background: $brand-accent--blue;
+	.enquire {
+		&--content {
+			display: grid;
+			grid-template-columns: repeat(2, 50%);
+		}
+
+		&--heading {
+			font-size: 6rem;
+		}
+	}
+}

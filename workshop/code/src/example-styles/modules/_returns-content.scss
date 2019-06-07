@@ -4,24 +4,25 @@
 
 	.returns {
 		&--content {
+			position: relative;
 
 			.copy {
 				display: flex;
 				flex-direction: column;
 				text-align: center;
 
-				p {
-					padding: $gutter $gutter*2;
-
-					&.emphasise {
-						font-size: $content--font-size * 1.4;
-					}
+				.emphasise {
+					font-size: $intro-content--font-size;
 				}
 			}
 		}
-		&--video {
-			@extend %vertical-center;
+
+		&--blob {
+			left: 55%;
 			z-index: 0;
+		    height: 100%;
+			@extend %vertical-center;
 		}
+
 	}
 }

@@ -1,0 +1,74 @@
+h1, h2, h3, h4, h5, h6, p, label {
+	font-family: 'Brandon Grotesque Medium';
+	line-height: 1.4;
+	margin: 0;
+}
+
+$h1-font--size: 40px;
+$increments: 2px;
+
+@for $i from 1 through 7 {
+	$fs: ($h1-font--size + $increments) - ($i * $increments);
+	@if $i == 7 {
+		p {
+			font-size: $fs;
+		}
+	} @else {
+		h#{$i} {
+			font-size: $fs;
+		}
+	}
+}
+
+form {
+	.row {
+		width: 100%;
+		max-width: 500px;
+		position: relative;
+		margin-bottom: 15px;
+
+		label {
+			left: 5px;
+			top: 5px;
+			position: absolute;
+			line-height: $input--size;
+	        transition: all .25s ease-in;
+	        box-sizing: border-box;
+			font-family: 'Brandon Grotesque Medium';
+		}
+
+		input {
+	        border: 0;
+			width: 100%;
+	        padding: 25px 5px 10px;
+			font-family: 'Brandon Grotesque Bold';
+	        box-sizing: border-box;
+			@include level(1, false);
+
+			&:focus, &:active, &.active {
+				@include level(2, false);
+				+ label {
+					left: 3px;
+					top: 5px;
+					font-size: 14px;
+					line-height: 14px;
+					color: $brand-primary--green;
+				}
+			}
+		}
+
+		button {
+			cursor: pointer;
+			width: 100%;
+			height: $input--size * 1.5;
+	        box-sizing: border-box;
+
+			border: 0;
+			padding: 0 20px;
+			font-size: 18px;
+			background: $brand-primary--white;
+			font-family: 'Brandon Grotesque Bold';
+			@include level(1, true);
+		}
+	}
+}

@@ -5,6 +5,10 @@
 		&--content {
 			display: grid;
 			grid-template-columns: repeat(2, 50%);
+
+			p {
+				font-size: $intro-content--font-size;
+			}
 		}
 		&--video {
 			@extend %overlay;
