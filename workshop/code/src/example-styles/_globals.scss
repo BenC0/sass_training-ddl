@@ -1,3 +1,6 @@
+// Storing the brand colours in variables to allow us to resuse them without remembering specific hex codes
+// This ensures we are using the same colour values throughout the projects
+// This also makes it easier to maintain the brand colours
 $brand-primary--green: #1BBC8C;
 $brand-primary--grey: #A6A6A6;
 $brand-primary--white: #E9EEEF;
@@ -16,6 +19,8 @@ $intro-content--font-size: 70px;
 
 $input--size: 44px;
 
+// Declaring extensions, allowing us to reuse these styles throughout the project.
+// Keeps styles DRY
 %absolute-center {
 	top: 50%;
 	left: 50%;
@@ -37,16 +42,22 @@ $input--size: 44px;
 	position: absolute;
 }
 
+// Extensions can extend each other
 %psuedo-overlay {
+	// This is how you make use of the extension
 	@extend %overlay;
 	content: ' ';
 }
 
+// Declaring mixins so we can reuse styles, similar to extensions but this allows us
+// to specify the colours used each time we call it.
 @mixin emphasise($col1, $col2) {
 	$offset: 3px;
 	text-shadow: -#{$offset} -#{$offset} 0px $col1,
 					#{$offset} #{$offset} 0px $col2;
 }
+
+// Complex mixin below...
 
 /// Computes a top-shadow for a card effect.
 /// @param {Number} $depth - depth level
@@ -76,6 +87,7 @@ $input--size: 44px;
 @mixin level($i, $hover) {
 	position: relative;
 	transition: all 0.15s ease-out;
+	// Using if statements to create more dynamic styles
 	@if $i != 0 {
 		box-shadow: bottom-shadow($i), top-shadow($i);
 	} @else {
