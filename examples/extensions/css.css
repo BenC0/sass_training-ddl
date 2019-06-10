@@ -1,0 +1,42 @@
+#heroContainer .hero--copy {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+#heroContainer .hero--video {
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+#heroContainer::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+#heroContainer::before {
+  content: ' ';
+}
+#heroContainer {
+  position: relative;
+  width: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+}
+#heroContainer .hero--video {
+  width: 100%;
+  height: auto;
+  z-index: 0;
+}
+#heroContainer .hero--copy {
+  width: 75vw;
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+#heroContainer::before {
+  z-index: 1;
+  background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, .25) 100%);
+}
