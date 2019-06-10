@@ -1,0 +1,22 @@
+// Store the h1 font size in a variable
+$h1-font--size: 40px;
+// Store the font-size increments in a variable
+$increments: 2px;
+
+// SCSS For Loop: Loop 7 times
+@for $i from 1 through 7 {
+	// Store font size in a variable
+	// Font size is equal to h1-font--size plus the increment, minus the increment times the current value of i
+	$fs: ($h1-font--size + $increments) - ($i * $increments);
+	// If i equals 7, declare the p font size
+	@if $i == 7 {
+		p {
+			font-size: $fs;
+		}
+	// If I is not equal to 7, declare the style using the value of i as the heading number (h1, h2, h3...)
+	} @else {
+		h#{$i} {
+			font-size: $fs;
+		}
+	}
+}
